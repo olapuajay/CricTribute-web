@@ -1,0 +1,200 @@
+*{
+    margin: 0;      
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, #0099ff 24%, #0033cc 75%);
+}
+
+.container{
+    display: flex;
+
+}
+
+/* .ind-info {
+    border-top: 4px double #0099ff;
+    border-bottom: 4px double #0033cc;
+    border-radius: 24px;
+} */
+.ind-image {
+    height: auto;
+    width: 400px;
+    border-radius: 20px;
+    margin: 15px;
+}
+@media(max-width: 444px) {
+    .ind-image {
+        height: auto;
+        width: 270px;
+        border-radius: 20px;
+        margin: 10px;
+    }
+} 
+.team-img {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+}
+.col h5 {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.ind-info h1{
+    font-weight: 500;
+    font-size: 2.5rem;
+    font-family: Georgia, serif;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: whitesmoke;
+}
+.ind-info p {
+    font-size: large;
+    margin-left: 10px;
+    color: darkblue;
+}
+
+.panel .panel-body{ 
+    padding: 0; 
+}
+.panel .panel-body .table thead tr th {
+    color: black;
+    background-color: transparent;
+    padding: 12px;
+    border: none;
+}
+.panel .panel-body .table tbody tr td {
+    color: #fff;
+    background-color: transparent;
+    font-size: 15px;
+    padding: 10px 12px;
+    vertical-align: middle;
+    border: none;
+}
+.record-grid {
+    display: flex;
+    flex-direction: column;
+}
+.record-grid p {
+    border-left: 4px solid yellow;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.tab h5 {
+    border-bottom: 2px solid orange;
+    padding: 5px 5px;
+    cursor: pointer;
+    color:orange;
+    border-radius: 2px;
+}
+
+.content{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+.content:first-child {
+    display: none;
+}
+
+
+.custom-carousel {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-top: 15px;
+}
+
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+.carousel-caption {
+    opacity: 0.5;
+    width: auto;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+.gallery-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+}
+.gallery img {
+    width: 100%;
+    
+}
+.gallery-container .gallery .image img {
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: transform 0.6s ease;
+}
+.gallery-container .gallery .image:hover img {
+    transform: translateY(-10px);
+    opacity: 1;
+}
+.gallery-container .popup-image {
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.gallery-container .popup-image span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+.gallery-container .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+@media (max-width:768px) {
+    .gallery-container .popup-image img {
+        width: 90%;
+    }
+}
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+}
+
+
+
+/* Add this CSS at the end of your existing CSS */
+  

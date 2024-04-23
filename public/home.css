@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+body{
+    background: linear-gradient(to top, #ffffff 6%, #6699ff 38%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar .navbar-brand {
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navbar {
+    height: 70px;
+    background:#6699ff;
+    background-attachment: fixed;
+    box-shadow: 0 0 10px azure;
+    position: fixed;
+}
+.collapse ul {
+    margin-left: 30%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.collapse ul li a{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.collapse ul li a:hover {
+    border-bottom: 2px solid azure;
+    border-radius: 4px;
+}
+.collapse ul li a:active {
+    opacity: 0.6;
+}
+@media(max-width: 768px) {
+    .collapse ul {
+        margin-left: 0;
+    }
+}
+
+#intro{
+    width: 100%;
+    color: azure;
+    padding: 100px;
+    
+    font-family: serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+@media(max-width: 500px){
+    #intro{
+        font-size: 1rem;
+        padding: 30px;
+    }
+}
+
+/* ----- Card ----- */
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-bottom: 70px;
+    /* margin-top: 100px; */
+}
+.card {
+    width: 250px;
+    background-color: azure;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.6s ease;
+    opacity: 0.8;
+}
+.card:hover {
+    transform: translateY(-20px);
+    opacity: 100%;
+}
+.card img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+.card-content {
+    padding: 10px;
+}
+.card-content h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.card-content p {
+    font-size: 13px;
+    color: #006da4;
+    margin-bottom: 10px;
+}
+.card-button {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+.card-button:active{
+    opacity: 0.6;
+}
+
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+.team-card {
+    transition: transform 0.6s ease;
+}
+.team-card:hover {
+    transform: translateY(-20px);
+}
+.social-link:hover, .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: blue;
+}
+.team-card ul a {
+    text-decoration: none;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+}
+
+
+.contact-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact-box {
+    max-width: 900px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.19);
+}
+.contact-box-left iframe {
+    padding: 10px 10px;
+    width: 100%;
+    height: 470px;
+}
+.contact-box-right {
+    padding: 25px 40px;
+}
+.contact-box-right h2 {
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 10px;
+}
+
+.field {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: .5rem 1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+.field::placeholder{
+    color: black;
+}
+.field:focus{
+    border-bottom: 2px solid darkblue;
+}
+textarea {
+    min-height: 150px;
+}
+.contact-box-right .myForm .message {
+    display: none;
+}
+.btn-warning:active{
+    opacity: 0.7;
+}
+@media screen and (max-width:769px){
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+    .contact-box-left iframe {
+        padding: o;
+    }
+}
