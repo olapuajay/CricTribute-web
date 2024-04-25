@@ -1,25 +1,29 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+require('dotenv').config();
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
+const mongoURL = process.env.Mongo_URL;
 
-mongoose.connect('mongodb://localhost:27017/mydb');
+mongoose.connect(mongoURL)
+.then(() => console.log('Connected to mongoDB'))
+.catch(err => console.error('Error connecting to mongoDB', err));
 
 
 var db = mongoose.connection;
 
 
-db.on('error', () => {
-    console.log('Error in connecting to database');
-})
-db.once('open', () => {
-    console.log('Connected to database');
-})
+// db.on('error', () => {
+//     console.log('Error in connecting to database');
+// })
+// db.once('open', () => {
+//     console.log('Connected to database');
+// })
 
 // Signup 
 
